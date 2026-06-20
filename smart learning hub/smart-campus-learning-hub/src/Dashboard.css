@@ -1,0 +1,108 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #0f5aa5;
+  --primary-soft: rgba(25, 118, 210, 0.12);
+  --border: rgba(255, 255, 255, 0.18);
+  --text: #eaf1ff;
+  --muted: rgba(234, 241, 255, 0.72);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-strong: rgba(255, 255, 255, 0.12);
+}
+
+/* Full app shell */
+.sc-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(25, 118, 210, 0.35), transparent 55%),
+    radial-gradient(700px 420px at 80% 20%, rgba(66, 165, 245, 0.28), transparent 52%),
+    radial-gradient(900px 520px at 50% 95%, rgba(15, 90, 165, 0.20), transparent 58%),
+    linear-gradient(180deg, #071427 0%, #0a1933 35%, #071427 100%);
+  color: var(--text);
+}
+
+/* Make sure native elements inherit */
+.sc-shell * {
+  color: inherit;
+}
+
+.sc-shell main {
+  padding-bottom: 40px;
+}
+
+/* Hero/heading */
+.sc-hero {
+  margin-bottom: 24px;
+}
+
+/* KPI grid */
+.sc-kpis {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+/* Glass card */
+.sc-glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.sc-glass--accent {
+  background: linear-gradient(180deg, rgba(25, 118, 210, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border-color: rgba(25, 118, 210, 0.38);
+}
+
+.sc-section {
+  margin-bottom: 24px;
+}
+
+/* Typography helper styles */
+.sc-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+.sc-subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Progress bar */
+.sc-progressBar {
+  margin-top: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sc-progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #1976d2, #42a5f5);
+}
+
+/* Progress details blocks */
+.sc-glassBlock {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(25, 118, 210, 0.28);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .sc-title {
+    font-size: 22px;
+  }
+}
+
